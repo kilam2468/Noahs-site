@@ -1,0 +1,45 @@
+---
+const services = [
+  {
+    step: '01',
+    name: 'Exterior Detailing',
+    description:
+      "Elevate your vehicle's appearance and protection with our exterior detailing services. From thorough washing and paint restoration to headlight clarity and wheel care, we offer a range of expert solutions to make your vehicle shine. Trust us to rejuvenate your car's exterior, leaving it looking pristine and safeguarded against the elements.",
+  },
+  {
+    step: '02',
+    name: 'Interior Detailing',
+    description:
+      "Explore our interior detailing services designed to rejuvenate and refresh your vehicle's interior. Our skilled team pays meticulous attention to every detail, offering a range of services, including thorough vacuuming, deep carpet and upholstery cleaning, leather care, and odor removal. Experience a clean, comfortable, and pristine interior when you choose our expert detailing services.",
+  },
+  {
+    step: '03',
+    name: 'Mobile Detailing',
+    description: 
+    "Experience the convenience of mobile detailing with our professional services that come to your location. Our expert team brings top-notch interior and exterior detailing right to your doorstep, saving you time and ensuring your vehicle looks its best without the hassle of travel.",
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Services</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        {
+          services.map((service) => (
+            <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
+              <p class="text-sm">{service.step}</p>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-xl font-medium">{service.name}</h3>
+                <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
